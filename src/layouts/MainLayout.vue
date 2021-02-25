@@ -4,43 +4,71 @@
       reveal
       :class="$q.dark.isActive ? 'header_dark' : 'header_normal'"
     >
-      <q-toolbar>
-        <q-toolbar-title>CRM Admin</q-toolbar-title>
-        <div class="divisor" />
+      <div >
+        <q-toolbar>
+          <q-space/>
+          <div class="divisor" />
+          <h7
+            >Telefone:
+            <a style="color: green; margin-right: 14px"
+              ><b>(91)XXXX-XXXX</b>
+            </a></h7
+          >
+          <div class="divisor" />
+          <h7
+            >Ouvidoria:
+            <a style="color: green; margin-right: 14px"
+              ><b>ouvidoria@portal.pa.gov.br</b>
+            </a></h7
+          >
+          <div class="divisor" />
+          <h7
+            >Funcionamento:
+            <a style="color: green; margin-right: 14px"
+              ><b>24h por dia</b>
+            </a></h7
+          >
+          <div class="divisor" />
+          <q-btn flat dense title="SIC.PA" class="q-mr-md">
+            <img height="40px" src="~/assets/sicpa.png" />
+          </q-btn>
+          <div class="divisor" />
+          <q-btn
+            flat
+            round
+            dense
+            title="Instagram"
+            icon="fab fa-instagram"
+            class="q-mr-md"
+          />
+          <div class="divisor" />
+          <q-btn
+            flat
+            round
+            dense
+            title="Facebook"
+            icon="facebook"
+            class="q-mr-md"
+            to="#"
+          />
+          <div class="divisor" />
+          <q-btn
+            flat
+            round
+            dense
+            title="Twitter"
+            icon="fab fa-twitter"
+            class="q-mr-md"
+            to="#"
+          />
+          <div class="divisor" />
+          <q-space/>
+        </q-toolbar>
+        <div class="divisor-horizontal"/>
+        <q-toolbar>
 
-        <q-btn flat dense title="SIC.PA" class="q-mr-md">
-          <img height="40px" src="~/assets/sicpa.png" />
-        </q-btn>
-        <div class="divisor" />
-        <q-btn
-          flat
-          round
-          dense
-          title="Instagram"
-          icon="fab fa-instagram"
-          class="q-mr-md"
-        />
-        <div class="divisor" />
-        <q-btn
-          flat
-          round
-          dense
-          title="Facebook"
-          icon="facebook"
-          class="q-mr-md"
-          to="#"
-        />
-        <div class="divisor" />
-        <q-btn
-          flat
-          round
-          dense
-          title="Twitter"
-          icon="fab fa-twitter"
-          class="q-mr-md"
-          to="#"
-        />
-      </q-toolbar>
+        </q-toolbar>
+      </div>
     </q-header>
     <q-page-container>
       <q-page class="row no-wrap">
@@ -116,5 +144,11 @@ body {
   border-left: 1px solid green;
   height: 50px;
   margin-right: 14px;
+}
+
+.divisor-horizontal {
+  width: 100%;
+  border-top: 1px solid green;
+  margin-top: 0%;
 }
 </style>
