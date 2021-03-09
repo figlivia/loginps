@@ -49,7 +49,7 @@
               />
 
               <div class="col text-h8 ellipsis" style="margin-top: 10px">
-                Ainda não tem conta? <a href="~/register"><b>Cadastre-se</b></a>
+                Ainda não tem conta? <a href="/#/register"><b>Cadastre-se</b></a>
               </div>
               <div class="col text-h8 ellipsis" style="margin-top: 10px">
                 <a href="#"><b>Esqueceu sua senha?</b></a>
