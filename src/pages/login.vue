@@ -35,21 +35,18 @@
           </q-card-section>
           <q-card-section>
             <q-form class="q-gutter-md">
-              <q-input 
-                v-model="cpf" 
-                label="CPF" 
-                lazy-rules 
-              />
+              <q-input v-model="cpf" label="CPF" lazy-rules />
 
               <q-input
                 type="password"
-                v-model="password"
                 label="Senha"
+                v-model="senha"
                 lazy-rules
               />
 
               <div class="col text-h8 ellipsis" style="margin-top: 10px">
-                Ainda não tem conta? <a href="/#/register"><b>Cadastre-se</b></a>
+                Ainda não tem conta?
+                <a href="/#/register"><b>Cadastre-se</b></a>
               </div>
               <div class="col text-h8 ellipsis" style="margin-top: 10px">
                 <a href="#"><b>Esqueceu sua senha?</b></a>
@@ -61,7 +58,7 @@
                   to="/dashboard"
                   type="button"
                   color="primary"
-                  @click="loginNotify"
+                  @click="login"
                 />
               </div>
             </q-form>
@@ -74,18 +71,31 @@
 
 <script type="text/javascript"></script>
 <script>
+
+import { api } from "boot/axios";
+
 export default {
   data() {
     return {
-      cpf: "000.000.000-00",
-      password: "admin",
+      cpf: '',
+      senha: ''
     };
   },
   methods: {
-    loginNotify() {
-      this.$q.notify({
-        message: "Login Successful",
-      });
+    login() {
+
+      const token = btoa(this.cpf + ':' + this.senha);
+      api
+        .post("/login/public", { cpf: this.cpf, senha: this.senha}, {headers: {'Authorization': `Basic ${token}`}})
+        .then((response) => {
+          console.log(response.status);
+          console.log(response.headers);
+          console.log('Logado com sucesso');
+        })
+        .catch(error => {
+          console.log('Erro ao logar');
+          console.log(error.response)
+        });
     },
   },
   mounted() {

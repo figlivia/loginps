@@ -73,6 +73,11 @@ export default {
       email: null,
       email_confirma: null
     }
+  },
+  methods() {
+  },
+  mounted() {
+    
   }
 }
 </script>
