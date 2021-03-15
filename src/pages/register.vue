@@ -31,7 +31,7 @@
                       class="col-6"
                       v-model="rg_emissor_uf"
                       :options="options"
-                      label="UF:" />
+                      label="UF-RG:" />
                        <q-input
                       class="col-6"
                       v-model="email"
