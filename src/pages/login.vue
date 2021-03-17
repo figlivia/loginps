@@ -49,7 +49,7 @@
                 <a href="/#/register"><b>Cadastre-se</b></a>
               </div>
               <div class="col text-h8 ellipsis" style="margin-top: 10px">
-                <a href="#"><b>Esqueceu sua senha?</b></a>
+                <a href="/#/recoverpass"><b>Esqueceu sua senha?</b></a>
               </div>
               <div>
                 <q-btn

@@ -32,7 +32,7 @@
                       v-model="rg_emissor_uf"
                       :options="options"
                       label="UF-RG:" />
-                       <q-input
+                    <q-input
                       class="col-6"
                       v-model="email"
                       label="Email:"
@@ -41,7 +41,18 @@
                       class="col-6"
                       v-model="email_confirma"
                       :options="options"
-                      label="Confirmar E-maol:" />
+                      label="Confirmar E-mail:" />
+                      <q-select
+                      class="col-6"
+                      v-model="senha"
+                      :options="options"
+                      label="Senha:" />
+                    <q-select
+                      class="col-6"
+                      v-model="senha_confirma"
+                      :options="options"
+                      label="Confirmar Senha:" />
+                
                 </q-card-section>
                 <!-- line -->
                 <q-card-section>
@@ -50,7 +61,12 @@
                 <!-- actions -->
                 <q-card-actions class="justify-center">
                     <!-- <q-space /> -->
-                    <q-btn color="white" text-color="black" label="Standard" />
+                    <q-btn 
+                    v-model="enviar" 
+                    to="/#/"
+                    color="white" 
+                    text-color="black" 
+                    label="Enviar" />
                     <!-- <q-space /> -->
                 </q-card-actions>
             </q-card>
@@ -71,13 +87,11 @@ export default {
          'SC', 'SP', 'SE', 'TO',  
       ],
       email: null,
-      email_confirma: null
+      email_confirma: null,
+      senha: null,
+      senha_confirma: null,
+      enviar: null
     }
-  },
-  methods() {
-  },
-  mounted() {
-    
   }
 }
 </script>

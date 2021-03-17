@@ -2,7 +2,7 @@
 const routes = [
   {
     path: '/', component: () => import('pages/login.vue'),
-   
+  
   },
   {
     path: '/',
@@ -10,7 +10,8 @@ const routes = [
     children: [
       {
         path: '/dashboard', component: () => import('pages/Index.vue'),
-        path: '/register', component: () => import('pages/register.vue')
+        path: '/register', component: () => import('pages/register.vue'),
+        // path: '/recoverpass', component: () => import('pages/recoverpass.vue')
       }
     ]
   },
