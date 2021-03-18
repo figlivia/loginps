@@ -36,18 +36,19 @@
                       class="col-6"
                       v-model="email"
                       label="Email:"
-                      :rules="[val => !!val || 'Field is required']" />
-                    <q-select
+                      :rules="[val => !!val || 'Campo obrigatório']" />
+                    <q-input
                       class="col-6"
                       v-model="email_confirma"
                       :options="options"
                       label="Confirmar E-mail:" />
-                      <q-select
+                      <q-input
                       class="col-6"
                       v-model="senha"
                       :options="options"
-                      label="Senha:" />
-                    <q-select
+                      label="Senha:" 
+                      :rules="[val => !!val || 'Campo é obrigatório']" />
+                    <q-input
                       class="col-6"
                       v-model="senha_confirma"
                       :options="options"
